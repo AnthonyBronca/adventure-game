@@ -19,7 +19,7 @@ class Adventurer {
     //instance method to change level, add a pay wall
     levelUp() {
         this.stats.combatlevel++
-        this.stats.health ++;
+        this.stats.health++;
     }
 
     levelSkill(skillname) {
@@ -34,6 +34,6 @@ Anthony.setBank('main_bank', 123456789, 987654321, 2_000)
 Anthony.setCharacter(new Adventurer('Apollo', Wizard))
 
 const apollo = Anthony.character
-apollo.changeName('Apollo Archery')
-console.log(Anthony.character.stats)
+// apollo.changeName('Apollo Archery')
+console.log(Anthony)
 // const ryan = new Adventurer('Ryan', Archer)

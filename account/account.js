@@ -1,11 +1,19 @@
 class Bank {
-
+    //private variables
+    #accountNumber;
+    #routingNumber;
+    #changeAccountNumber() {
+        this.#accountNumber = '123123123'
+    }
     constructor(accountName, routingNumber, accountNumber, balance) {
         this.accountName = accountName;
-        this.routingNumber = routingNumber;
-        this.accountNumber = accountNumber;
+        this.#routingNumber = routingNumber;
+        this.#accountNumber = accountNumber;
         this.balance = balance;
+
+
     }
+
 }
 
 
@@ -15,7 +23,7 @@ class Account {
         this.username = username;
         this.email = email;
         this.password = hashedpassword;
-        this.characters = character
+        this.characters = characters
         this.bank = null;
     }
 

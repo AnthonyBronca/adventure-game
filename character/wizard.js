@@ -1,6 +1,8 @@
 
 
 class Wizard {
+
+    #funds = 5
     constructor(
         spells = [],
         familiar = null,
@@ -15,7 +17,8 @@ class Wizard {
     }
     //todo
     addSpell() {
-
+        this.#funds = 1
+        console.log(this.#funds)
     }
     //todo
     addDebuff() {
@@ -33,6 +36,7 @@ class Wizard {
 
 }
 
-
+let test = new Wizard()
+test.addSpell()
 
 module.exports = Wizard;
