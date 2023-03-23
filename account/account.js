@@ -1,4 +1,5 @@
 class Bank {
+
     constructor(accountName, routingNumber, accountNumber, balance) {
         this.accountName = accountName;
         this.routingNumber = routingNumber;
@@ -10,17 +11,18 @@ class Bank {
 
 
 class Account {
-    constructor(username, email, hashedpassword, character = null) {
+    constructor(username, email, hashedpassword, characters = null) {
         this.username = username;
         this.email = email;
         this.password = hashedpassword;
-        this.character = character
+        this.characters = character
         this.bank = null;
     }
 
     //adds the character to the account
     setCharacter(char) {
-        this.character = char;
+        this.characters = char;
+
     }
 
     //adds bank info to the account

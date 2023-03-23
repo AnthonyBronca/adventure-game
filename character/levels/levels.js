@@ -22,7 +22,7 @@ const levels = {
 }
 
 class Level {
-    constructor(level = 1, xp = 100) {
+    constructor(level = 1, xp = 0) {
         this.level = level;
         this.xp = xp;
 
@@ -30,7 +30,7 @@ class Level {
             this.level++;
             this.levelUp();
         }
-        if (this.level >= 1) {
+        if (this.level > 1) {
             let currLevel = this.level
             let newXp = levels[currLevel]
             this.xp = newXp
