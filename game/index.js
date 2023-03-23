@@ -24,6 +24,7 @@ function terminalControls() {
         }
     });
     term.on('mouse', (name, data) => {
+        // console.log(name)
         if ((name.endsWith('MOUSE_WHEEL_'))) {
             term.moveTo(data.x, data.y);
         }
