@@ -15,15 +15,10 @@ class Adventurer {
         this.name = newName;
     }
     //instance method to change level, add a pay wall
-    levelUp(levelTo) {
-        if (levelTo !== undefined) {
-            this.health += ((levelTo - this.level) * 2)
-            this.level = levelTo;
-        } else {
-            this.health += 2;
-            this.level++;
-        }
-        console.log(`Congrats! You have reached level ${this.level}!`)
+    levelUp() {
+        this.level++;
+        this.health += 5;
+        console.log(`Congrats! You are now level ${this.level}!`)
     }
 
 }
