@@ -1,0 +1,4 @@
+const punch = {
+    skillName: 'punch'
+
+}

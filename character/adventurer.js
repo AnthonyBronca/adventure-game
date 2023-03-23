@@ -1,3 +1,4 @@
+const Account = require('../account/account.js')
 const defaultGear = require('../gear/default_gear')
 const Wizard = require('./wizard');
 const Archer = require('./archer');
@@ -11,7 +12,7 @@ class Adventurer {
         this.gear = defaultGear;
         this.className = className
     }
-    //allow user to change name if they pay $1.00
+    //allow user to change name
     changeName(newName) {
         this.name = newName;
     }
@@ -28,8 +29,10 @@ class Adventurer {
 
 }
 
+const Anthony = new Account('anthony_b', 'bronca@gmail.com', 'strong_password')
+Anthony.setBank('main_bank', 123456789, 987654321, 2_000)
+Anthony.setCharacter(new Adventurer('Apollo', Wizard))
 
-const anthony = new Adventurer('Anthony', Wizard);
+const apollo = Anthony.character
+apollo.changeName('Apollo Archery')
 // const ryan = new Adventurer('Ryan', Archer)
-
-console.log(anthony.stats)
