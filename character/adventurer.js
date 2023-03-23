@@ -1,11 +1,4 @@
-const defaultGear = {
-    head: null,
-    torso: 'shirt',
-    legs: 'pants',
-    mainHand: null,
-    offHand: null,
-    twohanded: false
-}
+const defaultGear = require('../gear/default_gear')
 
 class Adventurer {
     constructor() {
