@@ -7,9 +7,9 @@ const defaultGear = {
     twohanded: false
 }
 
-class Adventurer{
-constructor(){
+class Adventurer {
+    constructor() {
 
-}
+    }
 
 }
