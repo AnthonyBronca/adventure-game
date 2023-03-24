@@ -1,10 +1,8 @@
 
 
 class Wizard {
-
-    #funds = 5
     constructor(
-        spells = [],
+        spells = {},
         familiar = null,
         buffs = {},
         debuffs = {},
@@ -16,9 +14,13 @@ class Wizard {
 
     }
     //todo
-    addSpell() {
-        this.#funds = 1
-        console.log(this.#funds)
+    addSpell(spell) {
+        if (!this.spells[spell.name]) {
+            let name = spell.name
+            this.spells[name] = spell;
+        } else {
+            Error('user already knows that spell');
+        }
     }
     //todo
     addDebuff() {
