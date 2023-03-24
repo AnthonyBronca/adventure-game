@@ -13,7 +13,6 @@ class Wizard {
         this.debuffs = debuffs;
 
     }
-    //todo
     addSpell(spell) {
         if (!this.spells[spell.name]) {
             let name = spell.name
@@ -22,9 +21,13 @@ class Wizard {
             Error('user already knows that spell');
         }
     }
-    //todo
-    addDebuff() {
-
+    addDebuff(debuff) {
+        if (!this.debuffs[debuff.name]) {
+            let name = debuff.name
+            this.debuffs[name] = debuff;
+        } else {
+            Error('user already has that debuff');
+        }
     }
     //todo
     addBuff() {
