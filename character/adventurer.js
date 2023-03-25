@@ -1,4 +1,4 @@
-const defaultGear = require('../gear/default_gear')
+const { defaultGear } = require('../gear/default_gear')
 const random = require('getrandomjs')
 
 
