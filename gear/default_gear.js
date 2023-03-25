@@ -21,7 +21,7 @@ class DefaultGear {
 
 let guardgear = new DefaultGear('Steel Helmet', 'Steel Chestplate', 'Steel Leggings', 'Two-handed Greatsword', null, true);
 
-console.log(guardgear)
+// console.log(guardgear)
 
 
 

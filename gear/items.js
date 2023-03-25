@@ -23,30 +23,29 @@ class Gear {
 }
 
 
-
 let strawHat = new Gear('Straw Hat', 'A hat of Staw!');
 let strawShirt = new Gear('Straw Shirt', 'A shirt for farmers!', 0.5, 100)
 let strawPants = new Gear('Straw Pants', 'Pants for farming!', 0.5, 100)
 // let strawShirt = new Gear('Straw Shirt', 'A shirt for farmers!', 0.5, 50)
 
+module.exports = { strawHat, strawPants, strawShirt }
 
 
-
-console.log(strawHat)
+// console.log(strawHat)
 // console.log(strawShirt)
+// // console.log(strawPants)
+
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+// strawPants.degradeAble()
+
 // console.log(strawPants)
-
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-strawPants.degradeAble()
-
-console.log(strawPants)
-console.log(strawShirt)
+// console.log(strawShirt)
