@@ -7,4 +7,21 @@ const defaultGear = {
     twohanded: false
 }
 
-module.exports = defaultGear;
+class DefaultGear {
+    constructor(head, torso, legs, mainHand, offHand, twohanded) {
+        this.head = head || null,
+            this.torso = torso || 'red shirt',
+            this.legs = legs || 'black pants',
+            this.mainHand = mainHand || null,
+            this.offHand = offHand || null,
+            this.twohanded = twohanded || false
+    }
+}
+
+
+
+const npcAGear = new DefaultGear();
+const guardGear = new DefaultGear('Steel Helmet', 'Steel Torso', 'Steel Leggings', 'Steel GreatSword', null, true)
+
+
+module.exports = { defaultGear, DefaultGear };

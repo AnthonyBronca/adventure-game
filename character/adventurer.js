@@ -1,5 +1,5 @@
 const Account = require('../account/account.js')
-const defaultGear = require('../gear/default_gear')
+const { defaultGear } = require('../gear/default_gear')
 const Wizard = require('./wizard');
 const Archer = require('./archer');
 const Warrior = require('./warrior');
@@ -10,7 +10,7 @@ class Adventurer {
         this.name = name;
         this.stats = new Stats();
         this.gear = defaultGear;
-        this.className = className
+        this.className = className || null
     }
     //allow user to change name
     changeName(newName) {
@@ -37,3 +37,4 @@ const apollo = Anthony.character
 // apollo.changeName('Apollo Archery')
 console.log(Anthony)
 // const ryan = new Adventurer('Ryan', Archer)
+module.exports = Adventurer
