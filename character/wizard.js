@@ -86,15 +86,15 @@ class Wizard {
 
 }
 
-let test = new Wizard()
+// let test = new Wizard()
 
-let fire = { name: 'fire', description: 'shoots fire' }
+// let fire = { name: 'fire', description: 'shoots fire' }
 
-test.addFamiliar(fire)
-console.log(test)
-test.removeFamiliar(fire)
+// test.addFamiliar(fire)
+// console.log(test)
+// test.removeFamiliar(fire)
 
-console.log(test)
+// console.log(test)
 
 
 
