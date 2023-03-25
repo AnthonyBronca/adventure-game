@@ -1,4 +1,12 @@
-const defaultGear = require('../gear/default_gear')
+const { defaultGear } = require('../gear/default_gear')
+const random = require('getrandomjs')
+const readline = require('readline');
+const { marcus } = require('./npcs/npcs')
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
 
 
 class Adventurer {
@@ -10,38 +18,54 @@ class Adventurer {
     }
 
     //instance methods
-
     changeName(newName) {
         this.name = newName;
     }
-    //instance method to change level, add a pay wall
-    levelUp(levelTo) {
-        if (levelTo !== undefined) {
-            this.health += ((levelTo - this.level) * 2)
-            this.level = levelTo;
-        } else {
-            this.health += 2;
-            this.level++;
-        }
-        console.log(`Congrats! You have reached level ${this.level}!`)
+
+    //level up function that levels up one instance of a char
+
+    powerUp() {
+        this.level++;
+        let newHealth = random(1, 5)
+        this.health += newHealth;
     }
+
+    talkToNpc(npc) {
+        //see what dialogue has available,
+        let id = 1;
+        npc.isTalking = true;
+        const options = Object.keys(npc.dialogue);
+        //print out the questions that cause npc to respond
+        options.forEach(option => {
+            console.log(`Select ${id}: ${option}`)
+            id++
+        });
+
+        // allow player to select one of the options
+        rl.question('\n', (input) => {
+            let numRes = Number(input)
+            if (numRes === 1) {
+                console.log(npc.dialogue['how are you'])
+            } else if (numRes === 2) {
+                console.log(npc.dialogue['are you an adventurer'])
+            } else if (numRes === 3) {
+                console.log(npc.dialogue['You look funny'])
+            }
+            rl.close();
+            npc.isTalking = false;
+        })
+        // have npc print out their response to the question/input
+
+
+    }
+
 
 }
 
 
+// const ryan = new Adventurer('ryan')
+const anthony = new Adventurer('anthony')
 
-const ryan = new Adventurer('ryan');
-const anthony = new Adventurer('Anthony');
-// console.log(ryan)
-// ryan.changeName('Ryan');
-// // console.log(ryan)
-// // console.log(anthony)
-// ryan.levelUp(5);
-// anthony.levelUp();
-// anthony.levelUp();
-// console.log(anthony, ryan)
-// for(let i = 0; i < )
+anthony.talkToNpc(marcus)
 
-// console.log(ryan)
-
-module.exports = Adventurer;
+module.exports = Adventurer
