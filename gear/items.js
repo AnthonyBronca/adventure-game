@@ -28,7 +28,7 @@ let strawShirt = new Gear('Straw Shirt', 'A shirt for farmers!', 0.5, 100)
 let strawPants = new Gear('Straw Pants', 'Pants for farming!', 0.5, 100)
 // let strawShirt = new Gear('Straw Shirt', 'A shirt for farmers!', 0.5, 50)
 
-module.exports = { strawHat, strawPants, strawShirt }
+module.exports = { strawHat, strawPants, strawShirt, Gear }
 
 
 // console.log(strawHat)
