@@ -23,7 +23,7 @@ class Npc extends Adventurer {
 
 
 const npcAGear = new DefaultGear();
-const darkWizardGear = new DefaultGear()
+const darkWizardGear = new DefaultGear(dark_wizard_hat, dark_wizard_robe,)
 const guardGear = new DefaultGear('Steel Helmet', 'Steel Torso', 'Steel Leggings', 'Steel GreatSword', null, true)
 
 
