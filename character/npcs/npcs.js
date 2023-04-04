@@ -27,16 +27,16 @@ class Npc {
 
 
 const marcus = new Npc('Marcus', 'Warrior', blackSmith.gear, true, blackSmith);
-const ryan = new Npc('Ryan', 'Archer', blackSmith.gear, true, blackSmith);
+// const ryan = new Npc('Ryan', 'Archer', blackSmith.gear, true, blackSmith);
 
 
 //negative to decrease, positive to increase, a number must be passed
-marcus.job.adjustSalary(15_000)
+// marcus.job.adjustSalary(15_000)
 
-ryan.job.addSkill('Some new skill')
+// ryan.job.addSkill('Some new skill')
 
-ryan.job.removeSkill('craft alloy')
-console.log(ryan)
+// ryan.job.removeSkill('craft alloy')
+// console.log(ryan)
 
 // console.log(marcus)
 

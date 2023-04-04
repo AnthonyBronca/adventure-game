@@ -2,10 +2,7 @@ const { defaultGear } = require('../gear/default_gear')
 const random = require('getrandomjs')
 const readline = require('readline');
 const { marcus } = require('./npcs/npcs')
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
+
 
 
 
@@ -31,6 +28,10 @@ class Adventurer {
     }
 
     talkToNpc(npc) {
+        const rl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        })
         //see what dialogue has available,
         let id = 1;
         npc.isTalking = true;
@@ -64,8 +65,8 @@ class Adventurer {
 
 
 // const ryan = new Adventurer('ryan')
-const anthony = new Adventurer('anthony')
+// const anthony = new Adventurer('anthony')
 
-anthony.talkToNpc(marcus)
+// anthony.talkToNpc(marcus)
 
 module.exports = Adventurer
