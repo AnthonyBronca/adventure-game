@@ -28,7 +28,13 @@ class Npc {
 
 const marcus = new Npc('Marcus', 'Warrior', blackSmith.gear, true, blackSmith);
 // const ryan = new Npc('Ryan', 'Archer', blackSmith.gear, true, blackSmith);
+function thisObjectName() {
+    console.log(this.name)
+}
 
+const marcFunc = thisObjectName.bind(marcus)
+
+marcFunc()
 
 //negative to decrease, positive to increase, a number must be passed
 // marcus.job.adjustSalary(15_000)
